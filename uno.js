@@ -16,7 +16,6 @@ function mostrar() {
   let acummamifero = 0;
   let acumReptil = 0;
 
-
   do {
     nombre = prompt("ingrese Nombre").toLowerCase();
     while (nombre.length < 3 || nombre.length > 8) {
@@ -65,7 +64,7 @@ function mostrar() {
 
     seguir = prompt("quiere seguir? s/n").toLowerCase();
   }
-  while (seguir == 's');
+  while (seguir == 's'); 
   document.write("a) El Promedio de edad de los reptiles es " + acumEdadReptil / contEdadFinal + ".<br>");
   document.write("b) El tipo de la mascota mas joven es: " + tipo + "y el sexo " + sexo + ".<br>");
   document.write("c) El porcentaje de mascotas que son aves es " + (acumave * 100) / ContAnimales + ".<br>");

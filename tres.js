@@ -3,11 +3,11 @@ function mostrar() {
     let tipo;
     let origen;
     let precio;
-    let acumMuñeca = 0;
+    let acumMuneca = 0;
     let acumRompecabezas = 0;
     let acumPelota = 0;
-    let acumPrecioMuñecosImportados = 0;
-    let acumMuñecosImportados = 0;
+    let acumPrecioMunecosImportados = 0;
+    let acumMunecosImportados = 0;
     let acumPrecioTotal = 0;
     let rompecNacionalBarato = 0;
     let flag = 1;
@@ -27,7 +27,7 @@ function mostrar() {
       }
   
       if (tipo == "muñeca") {
-        acumMuñeca++;
+        acumMuneca++;
       } else if (tipo == "pelota") {
         acumPelota++;
       } else {
@@ -35,8 +35,8 @@ function mostrar() {
       }
   
       if (origen == "importado") {
-        acumPrecioMuñecosImportados += precio;
-        acumMuñecosImportados++;
+        acumPrecioMunecosImportados += precio;
+        acumMunecosImportados++;
       }
   
       acumPrecioTotal += precio;
@@ -49,14 +49,14 @@ function mostrar() {
       seguir = prompt("quiere seguir? s/n").toLowerCase();
     } while (seguir == 's');
   
-    if (acumMuñeca > acumPelota && acumMuñeca > acumRompecabezas) {
+    if (acumMuneca > acumPelota && acumMuneca > acumRompecabezas) {
       document.write("a- El tipo de juguete mas vendido es: Muñeca.<br>");
-    } else if (acumPelota > acumMuñeca && acumPelota > acumRompecabezas) {
+    } else if (acumPelota > acumMuneca && acumPelota > acumRompecabezas) {
       document.write("a- El tipo de juguete mas vendido es: Pelota.<br>");
-    } else if (acumRompecabezas > acumPelota && acumRompecabezas > acumMuñeca) {
+    } else if (acumRompecabezas > acumPelota && acumRompecabezas > acumMuneca) {
       document.write("a- El tipo de juguete mas vendido es: Rompecabezas.<br>");
     }
-    document.write("b- El promedio de precio de los juguetes importados es: " + acumPrecioMuñecosImportados / acumMuñecosImportados + ".<br>");
+    document.write("b- El promedio de precio de los juguetes importados es: " + acumPrecioMunecosImportados / acumMunecosImportados + ".<br>");
     document.write("c- La recaudacion total es: $" + acumPrecioTotal + ".<br>");
     document.write("d- El precio del rompecabezas nacional mas barato es: " + rompecNacionalBarato + ".<br>");
     document.write("e- En total se percibió $" + acumPrecioTotal * 0.21 + " de IVA.");

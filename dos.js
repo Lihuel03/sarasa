@@ -21,7 +21,7 @@ function mostrar() {
   let nombreAlumnoMasMaterias;
   let edadAlumnoMasMaterias;
 
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 500; i++) { 
 
     nombre = prompt("Ingrese su nombre");
     while (nombre.length == 0) {
@@ -33,13 +33,13 @@ function mostrar() {
       carrera = prompt("Ingrese carrera valida: ").toLowerCase();
     }
 
-    sexo = prompt("Ingrese su sexo (Masculino, Femenino, No binario)").toLowerCase();
-    while (sexo == "masculino" || sexo == "femenino" || sexo == "no binario") {
+    sexo = prompt("Ingrese su sexo (Masculino, Femenino, No binario)").toLowerCase();  
+    while (!(sexo == "masculino" || sexo == "femenino" || sexo == "no binario")) {   
       sexo = prompt("Ingrese sexo valido:  ").toLowerCase();
     }
     cantidadMaterias = parseInt(prompt("Ingrese cantidad de materias (entre 0 y 5)"));
     while (isNaN(cantidadMaterias) || cantidadMaterias < 0 || cantidadMaterias > 5) {
-      cantidadMaterias = parseInt(prompt("Error! Reingrese cantidad de materias (entre 0 y 5)"));
+      cantidadMaterias = parseInt(prompt("ingrese cantidad valida ")); 
     }
     nota = parseInt(prompt("Ingrese su nota (entre 0 y 10)"));
     while (isNaN(nota) || nota < 0 || nota > 10){ 
@@ -49,8 +49,6 @@ function mostrar() {
     while (isNaN(edad) || edad == 0 || edad < 0) {
       edad = parseInt(prompt("ingrese edad valida "));
     }
-
-
     if (flagMejorPromedioFisica == 0 && carrera == "fisica") {
       flagMejorPromedioFisica = nota;
       nombreMejorPromedioFisica = nombre;
@@ -58,7 +56,6 @@ function mostrar() {
       flagMejorPromedioFisica = nota;
       nombreMejorPromedioFisica = nombre;
     }
-
     if (flagAlumnaMasJoven == 0 && sexo == "femenino") {
       flagAlumnaMasJoven = edad;
       nombreAlumnaMasJoven = nombre;
@@ -76,8 +73,7 @@ function mostrar() {
       case "sistemas":
         contadorEstudiantesSistemas += 1;
         break;
-    }
-
+    }  
     if (flagMasMaterias == 0 && carrera != "quimica") {
       flagMasMaterias = cantidadMaterias; 
       edadAlumnoMasMaterias = edad;
